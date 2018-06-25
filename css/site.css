@@ -1,0 +1,23 @@
+h1{
+  display: flex;
+  justify-content: center;
+}
+
+.header{
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.court{
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px rgb(28, 173, 28);
+}
+
+canvas{
+  border: solid 1px red;
+  /* color: rgb(255, 255, 255); */
+}
