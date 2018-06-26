@@ -13,8 +13,17 @@
   <div class="container-fluid">
     <div class="row header">
       <div class="col-sm-12">
+        <h1>Ping-Pong!</h1> 
+      </div>
+    </div>
+  </div>
 
-        <h1>Hello, Ping-Pong!</h1> 
+  <div class="container">
+    <div class="row buttons">
+      <div class="col-sm-12">
+
+        <button  class="btn btn-primary" id="start-button">Start</button>
+        <button  class="btn btn-warning" id="pause-button">Pause</button>
         
       </div>
     </div>
@@ -23,8 +32,11 @@
   <div class="container">
       <div class="row">
         <div class="col-sm-12 court">
+          
   
+            
             <canvas id="canvas" width="800" height="400"></canvas>
+            <canvas id="courtCanvas" width="800" height="400"></canvas>
           
         </div>
       </div>
@@ -36,5 +48,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="./src/canvas.js"></script>
+  <script src="./src/app.js"></script>
 </body>
 </html>
