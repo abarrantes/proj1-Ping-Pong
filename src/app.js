@@ -5,7 +5,7 @@ var newRightPaddle = new Paddle("r");
 var keysPressedPlayer1 = [];
 var keysPressedPlayer2 = [];
 var start;
-var puntos1 = 5;
+var puntos1 = 0;
 var puntos2 = 0;
 var difficulty = 15;
 var level = 1;
