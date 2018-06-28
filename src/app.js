@@ -10,6 +10,9 @@ var puntos2 = 0;
 var difficulty = 15;
 var level = 1;
 
+//var hitSound = new Sound("./sounds/FreeSFXPackage/MP3/Woosh/Woosh-Light-02.mp3")
+var missSound = new Sound("./sounds/FreeSFXPackage/MP3/Woosh/Woosh-Light-01.mp3")
+
 document.getElementById("start-button").onclick = function () {
   if (!$(this).hasClass("disabled")) {
     start = setInterval(startGame, difficulty);
@@ -58,9 +61,11 @@ function startGame() {
   newRightPaddle.drawRightPaddle();
 
   if (checkIfPonintOnLeft()) {
+    missSound.play();
     ctx.clearRect(0, 0, 800, 400); // Here I need to insert a functionality to celabrate the score, other wise is to sutill because the game does not stop. I want the game to not stop.
   }
   if (checkIfPonintOnRight()) {
+    missSound.play();
     ctx.clearRect(0, 0, 800, 400); // Here I need to insert a functionality to celabrate the score, other wise is to sutill because the game does not stop. I want the game to not stop.
   }
 
@@ -107,6 +112,7 @@ function checkIfPonintOnLeft() {
   ) {
     puntos2 += 1;
     $("#puntos2").html(puntos2);
+    
     return true;
   }
   if (newBall.x === 10) { affectSlopeWithLeftPaddle(keysPressedPlayer1)};
@@ -177,7 +183,7 @@ function checkIfPlayer1Wins(){
 }
 
 function checkIfPlayer2Wins(){
-  if(puntos1 > 20){
+  if(puntos2 > 20){
     clearInterval(start);
     $("#title").text("PLAYER TWO WON!!!!")
     setTimeout(function (){
@@ -185,3 +191,22 @@ function checkIfPlayer2Wins(){
     }, 4000); 
   }
 }
+
+
+function Sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+      this.sound.play();
+  }
+  this.stop = function(){
+      this.sound.pause();
+  }    
+}
+
+
+
