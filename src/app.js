@@ -11,7 +11,7 @@ var difficulty = 15;
 var level = 1;
 
 //var hitSound = new Sound("./sounds/FreeSFXPackage/MP3/Woosh/Woosh-Light-02.mp3")
-var missSound = new Sound("./sounds/FreeSFXPackage/MP3/Woosh/Woosh-Light-01.mp3")
+var missSound = new Sound("./sounds/Woosh-Light-02t.mp3")
 
 document.getElementById("start-button").onclick = function () {
   if (!$(this).hasClass("disabled")) {
@@ -200,13 +200,12 @@ function Sound(src) {
   this.sound.setAttribute("controls", "none");
   this.sound.style.display = "none";
   document.body.appendChild(this.sound);
-  this.play = function(){
-      this.sound.play();
-  }
-  this.stop = function(){
-      this.sound.pause();
-  }    
 }
 
+Sound.prototype.play = function () {
+  this.sound.play();
+};
 
-
+Sound.prototype.stop = function () {
+  this.sound.pause();
+};
