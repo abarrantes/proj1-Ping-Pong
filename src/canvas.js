@@ -6,12 +6,12 @@ function importCourtImage() {
   courtImage.onload = function () {
     courtCtx.drawImage(courtImage, 0, 0, 800, 400);
   };
-  courtImage.src = './images/court-green-01.png';
+  courtImage.src = './images/court-black-01.png';
 }
 
 Ball.prototype.drawBall = function () {
   ctx.beginPath();
-  ctx.fillStyle = 'rgba(255, 255, 0,100)'
+  ctx.fillStyle = 'rgba(255, 255, 255,100)'
   ctx.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, true);
   ctx.fill();
 }

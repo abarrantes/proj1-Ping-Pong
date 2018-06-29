@@ -1,6 +1,22 @@
+@font-face {
+  font-family: Atari;
+  src: url(./../fonts/PressStart2P.ttf);
+}
+
+*{
+  font-family: Atari;
+  color: white;
+}
+
+body{
+  background-color: black;
+}
+
 h1{
   display: flex;
-  justify-content: left;
+  justify-content: left;  
+  color: white;
+  font-size: 2em;
 }
 
 .header{
@@ -13,6 +29,11 @@ h1{
   height: 50px;
   display: flex;
   align-items: center;
+  font-size: 1em;
+}
+
+.btn{
+  border-radius: 0;
 }
 
 .court{
@@ -20,18 +41,18 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px rgb(28, 173, 28);
+  border: solid 1px white;
 }
 
 #courtCanvas{
-  border: solid 5px green;
+  border: solid 5px white;
   position: absolute;
   left: 150px;
   z-index: 1;
 }
 
 #canvas{
-  border: solid 5px green;
+  border: solid 5px white;
   position: absolute;
   left: 150px;
   z-index: 2;
